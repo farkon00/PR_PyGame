@@ -36,7 +36,7 @@ class Game:
             for j in range(int(self.screen.get_rect().height / 80)):
                 self.rains.append(Rain(self, i*90, j*90))
         
-        pygame.display.set_caption("Task 1")
+        pygame.display.set_caption("Task 3")
 
     def start_game(self) -> None:
         """Запуск основного цикла игры. Блокирует!"""

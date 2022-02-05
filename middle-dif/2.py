@@ -30,7 +30,7 @@ class Game:
             for j in range(int(self.screen.get_rect().height / 90)):
                 self.stars.append(Star(self, i*90+random.randrange(-10, 11), j*90+random.randrange(-10, 11)))
         
-        pygame.display.set_caption("Task 1")
+        pygame.display.set_caption("Task 2")
 
     def start_game(self) -> None:
         """Запуск основного цикла игры. Блокирует!"""

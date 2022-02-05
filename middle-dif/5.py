@@ -54,7 +54,7 @@ class Game:
         self.ball = Ball(self)
         self.hero = Hero(self)
         
-        pygame.display.set_caption("Task 1")
+        pygame.display.set_caption("Task 5")
 
     def start_game(self) -> None:
         """Запуск основного цикла игры. Блокирует!"""
