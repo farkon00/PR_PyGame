@@ -56,7 +56,7 @@ class Game:
 
         self.missed = 0
         
-        pygame.display.set_caption("Task 5")
+        pygame.display.set_caption("Task 6")
 
     def start_game(self) -> None:
         """Запуск основного цикла игры. Блокирует!"""
