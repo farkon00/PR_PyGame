@@ -14,16 +14,16 @@ class Bullet(pygame.sprite.Sprite):
         # Поля для наследовоного класса
         self.color = self.config.bullet_color
         self.rect = pygame.Rect(0, 0, self.config.bullet_width, self.config.bullet_height)
-        self.rect.midtop = game.ship.rect.midtop
+        self.rect.center = game.ship.rect.center
 
-        self.y = float(self.rect.y)
+        self.x = float(self.rect.x)
 
     def update(self) -> None:
         """Перемещает пулю вверх"""
 
-        self.y -= self.config.bullet_speed
+        self.x += self.config.bullet_speed
         
-        self.rect.y = int(self.y)
+        self.rect.x = int(self.x)
 
     def draw(self) -> None:
         """Вывод пули на экран"""

@@ -10,10 +10,15 @@ class Config:
         self.ship_count = 3
 
         # Настройки пули
-        self.bullet_width = 3
-        self.bullet_height = 15
+        self.bullet_width = 15
+        self.bullet_height = 3
         self.bullet_color = (60, 60, 60)
         self.allowed_bullets = 3
+
+        # Настройки мешени
+        self.target_color = (255, 0, 0)
+        self.target_width = 75
+        self.target_speed = 0.3
 
         # Настройки пришельцев
         self.y_alien_speed = 20

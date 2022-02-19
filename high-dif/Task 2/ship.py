@@ -14,14 +14,17 @@ class Ship:
         if pos:
             self.rect.topleft = pos
         else:
-            self.rect.midbottom = self.screen_rect.midbottom
+            self.rect.left = self.screen_rect.left
+            self.rect.y = self.screen_rect.height // 2 - self.rect.height // 2
 
-        self.x = float(self.rect.x)
+            self.y : float = float(self.rect.y)
+
+        self.y = float(self.rect.y)
 
     def blit(self) -> None:
         """Рисует корабль"""
-        if  self.x + self.move > 0 and self.x + self.move + self.rect.width < self.screen_rect.width:
-            self.x += self.move
-        self.rect.x = self.x
+        if  self.y + self.move > 0 and self.y + self.move + self.rect.height < self.screen_rect.height:
+            self.y += self.move
+        self.rect.y = self.y
 
         self.screen.blit(self.image, self.rect)
