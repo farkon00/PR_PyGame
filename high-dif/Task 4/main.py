@@ -3,6 +3,7 @@ import time
 
 from config import Config
 from button import Button
+from dif_text import Text
 from ship import Ship
 from bullet import Bullet
 from stats import Stats
@@ -26,6 +27,7 @@ class Game:
 
         self.button = Button(self, "Play")
         self.difs = [Button(self, "Сложность 1", pos=(150, 130)), Button(self, "Сложность 2", pos=(400, 130)), Button(self, "Сложность 3", pos=(650, 130))]
+        self.dif_text = Text(self)
 
         self.hps = [Ship(self, pos=(i, 0)) for i in range(0, self.config.ship_count * 70 + 1, 70)]
         
@@ -139,6 +141,8 @@ class Game:
             self.button.draw_button()
             for i in self.difs:
                 i.draw_button()
+
+        self.dif_text.update()
 
         pygame.display.flip()
 
