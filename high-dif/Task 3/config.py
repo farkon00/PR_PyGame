@@ -18,6 +18,7 @@ class Config:
         # Настройки мешени
         self.target_color = (255, 0, 0)
         self.target_width = 75
+        self.target_speed = 0.3
 
         # Настройки пришельцев
         self.y_alien_speed = 20
@@ -34,10 +35,7 @@ class Config:
 
         self.x_alien_speed : float = 0.2
 
-        self.target_speed = 0.3
-
     def increase_speed(self):
         self.ship_speed *= self.speed_scale
         self.bullet_speed *= self.speed_scale
         self.x_alien_speed *= self.speed_scale
-        self.target_speed *= self.speed_scale
